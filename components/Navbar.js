@@ -5,32 +5,24 @@ import Image from "next/image";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <section>
+    <div>
       <Head>
         <title>GDSC VIT Chennai</title>
         <meta name="description" content="GDSC VIT Chennai" />
         <link rel="icon" href="gdsc.png" />
       </Head>
       <nav className="w-full shadow">
-        <section className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <section className="flex flex-auto justify-start gap-4 items-center">
-            <Image src="/gdsc.png" alt="gdsc logo" width="50vh" height="50vh" />
-            <Link href={"#"} className="">
-              <>
-                <section>
-                  <section className="text-lg text-black font-sembold font-sans-gl">
-                    Developer Student Clubs
-                  </section>
-                  <section className="text-md font-regular font-sans-gl">
-                    Vellore institute of Technology, Chennai
-                  </section>
-                </section>
-              </>
-            </Link>
-          </section>
-          <section>
-            <section className="flex items-center justify-between py-3 md:py-5 md:block">
-              <section className="md:hidden">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <Image src="/gdsc.png" alt="gdsc logo" width="50vh" height="50vh" />
+
+          <div>
+            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+              <a href="#">
+                <h2 className="text-2xl text-black font-bold">
+                  GDSC VIT-CHENNAI
+                </h2>
+              </a>
+              <div className="md:hidden">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -65,16 +57,16 @@ const Navbar = () => {
                     </svg>
                   )}
                 </button>
-              </section>
-            </section>
-          </section>
-          <section>
-            <section
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
               className={
                 'flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}'
               }
             >
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 font-sans-gl">
+              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-black">
                   <Link href="/">
                     <a>Home</a>
@@ -106,11 +98,11 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-            </section>
-          </section>
-        </section>
+            </div>
+          </div>
+        </div>
       </nav>
-    </section>
+    </div>
   );
 };
 
